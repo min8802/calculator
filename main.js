@@ -31,12 +31,37 @@ function onClickNumber(number) {
 
 
 function onClickOperator (inputOperator) {
-    result = resultEl.innerHTML;
+    result = +resultEl.innerHTML;
     resultEl.innerHTML = 0;
     operator = inputOperator;
-    
+    console.log(operator)
 }
+
+// 함수안에서 변수에 값 할당해줘도 위에있는 전역변수 값이 바뀌네? operator
 
 // 문자를 숫자로 바꾸는 방법
 // Number(), parseInt(), 문자앞에 +
 // 연산자 '+', '-', '*' 를 저장
+
+function onClickEnter() {
+  switch (operator) {
+    case "+":
+      result += +resultEl.innerHTML;
+      resultEl.innerHTML = result;
+      break;
+    case "-":
+      result -= +resultEl.innerHTML;
+      resultEl.innerHTML = result;
+      break;
+    case "*":
+      result *= +resultEl.innerHTML;
+      resultEl.innerHTML = result;
+      break;
+    case "/":
+      result = parseInt(result / +resultEl.innerHTML, 10) ;
+      resultEl.innerHTML = result;
+      break;
+    default:
+      console.log("잘못된 연산자입니다.");
+  }
+}
