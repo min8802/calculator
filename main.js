@@ -67,5 +67,10 @@ function onClickEnter() {
 }
 
 function onClickDel() {
-  www
+  resultEl.innerHTML = resultEl.innerHTML.substring(0, resultEl.innerHTML.length -1)
+  console.log(result)
+
+  if (resultEl.innerHTML.length === 0) {
+    resultEl.innerHTML = 0;
+  }
 }
