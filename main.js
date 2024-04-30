@@ -1,4 +1,5 @@
 let result = 0;
+let operator = "";
 
 const resultEl = document.querySelector(".result");
 
@@ -22,5 +23,20 @@ function onClickNumber(number) {
       resultEl.innerHTML += number;
     }
 
-    console.log(resultEl.innerHTML.length)
+    console.log(resultEl.innerHTML.length);
   }
+
+// + 눌렀을 때 현재 입력한 숫자를 저장하는데 
+// 문자를 숫자로 바꿔서 저장 그리고 0으로 교체
+
+
+function onClickOperator (inputOperator) {
+    result = resultEl.innerHTML;
+    resultEl.innerHTML = 0;
+    operator = inputOperator;
+    console.log(operator)
+}
+
+// 문자를 숫자로 바꾸는 방법
+// Number(), parseInt(), 문자앞에 +
+// 연산자 '+', '-', '*' 를 저장
