@@ -67,5 +67,5 @@ function onClickEnter() {
 }
 
 function onClickDel() {
-  
+  www
 }
