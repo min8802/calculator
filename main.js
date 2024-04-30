@@ -34,7 +34,7 @@ function onClickOperator (inputOperator) {
     result = resultEl.innerHTML;
     resultEl.innerHTML = 0;
     operator = inputOperator;
-    console.log(operator)
+    
 }
 
 // 문자를 숫자로 바꾸는 방법
