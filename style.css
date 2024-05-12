@@ -33,7 +33,7 @@ h1{
     /*진행 방향 교차축에 대한 정렬align-items:*/
 }
 
-.result{
+.result, .result1{
     width: 320px;
     height: 80px;
     background-color: aquamarine;
